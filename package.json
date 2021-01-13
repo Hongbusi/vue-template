@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "{{ author }}",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.1"
+  }
 }
