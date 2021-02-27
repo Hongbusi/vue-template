@@ -2,7 +2,10 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import './icons/index';
+
+import './styles/index.less'; // global css
+
+import './icons'; // iconfont
 
 Vue.config.productionTip = false;
 
