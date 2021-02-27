@@ -7,6 +7,9 @@ import './styles/index.less'; // global css
 
 import './icons'; // iconfont
 
+import Cookies from 'js-cookie';
+Cookies.set('token', 'token');
+
 Vue.config.productionTip = false;
 
 new Vue({
