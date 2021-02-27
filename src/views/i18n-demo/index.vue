@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="i18n-demo">
     {{ $t('lang.Language') }}
     <select v-model="selectedLanguage">
       <option value="zh">{{ $t('lang.zh') }}</option>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'I18nDemo',
   props: {},
   data() {
     return {
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.home {
+.i18n-demo {
   text-align: center;
 }
 </style>
