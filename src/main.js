@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 
 import './styles/index.less'; // global css
-
+import i18n from './lang'; // internationalization
 import './icons'; // iconfont
 
 import Cookies from 'js-cookie';
@@ -15,5 +15,6 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app');
