@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'I18nDemo',
+  name: 'I18n',
   props: {},
   data() {
     return {
