@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 Vue.prototype.$cookie = Cookies;
 
 import moment from 'moment';
-moment.locale('zh-cn');
+moment.locale(store.getters.language);
 Vue.prototype.$moment = moment;
 
 import './styles/index.less'; // global css

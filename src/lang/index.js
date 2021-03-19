@@ -10,7 +10,7 @@ const messages = {
   en: {
     ...enLocale,
   },
-  zh: {
+  'zh-cn': {
     ...zhLocale,
   }
 };
@@ -27,7 +27,7 @@ export function getLanguage() {
       return locale;
     }
   }
-  return 'zh';
+  return 'zh-ch';
 }
 
 const i18n = new VueI18n({
