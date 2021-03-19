@@ -6,13 +6,14 @@ import store from './store';
 import Cookies from 'js-cookie';
 Vue.prototype.$cookie = Cookies;
 
-import moment from 'moment';
-moment.locale(store.getters.language);
-Vue.prototype.$moment = moment;
-
 import './styles/index.less'; // global css
 import i18n from './lang'; // internationalization
 import './icons'; // iconfont
+
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
+dayjs.locale(store.getters.language);
+Vue.prototype.$dayjs = dayjs;
 
 Vue.config.productionTip = false;
 

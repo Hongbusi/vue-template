@@ -6,9 +6,6 @@ export default {
   },
   example: {
     detailedTutorial: 'Detailed tutorial',
-    dateFormatting: 'Date formatting',
-    relativeTime: 'Relative time',
-    calendarTime: 'Calendar time',
-    multilingualSupport: 'Multilingual support'
+    dateFormatting: 'Date formatting'
   }
 };

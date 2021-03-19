@@ -13,52 +13,14 @@
     </header>
 
     <section class="example-section">
-      <h1>Moment</h1>
-      <p>{{ $t('example.detailedTutorial') }}：<a href="http://momentjs.cn/" target="_blank">Moment</a></p>
+      <h1>Day.js</h1>
+      <p>{{ $t('example.detailedTutorial') }}：<a href="https://dayjs.gitee.io/zh-CN/" target="_blank">Day.js</a></p>
 
       <p>{{ $t('example.dateFormatting') }}</p>
-      <div class="moment-method">
-        <p>{{ $moment().format('MMMM Do YYYY, h:mm:ss a') }}</p>
-        <p>{{ $moment().format('dddd') }}</p>
-        <p>{{ $moment().format('MMMM Do YYYY') }}</p>
-        <p>{{ $moment().format('YYYY [escaped] YYYY') }}</p>
-        <p>{{ $moment().format() }}</p>
-      </div>
-
-      <p>{{ $t('example.relativeTime') }}</p>
-      <div class="moment-method">
-        <p>{{ $moment("20111031", "YYYYMMDD").fromNow() }}</p>
-        <p>{{ $moment("20120620", "YYYYMMDD").fromNow() }}</p>
-        <p>{{ $moment().startOf('day').fromNow() }}</p>
-        <p>{{ $moment().endOf('day').fromNow() }}</p>
-        <p>{{ $moment().startOf('hour').fromNow() }}</p>
-      </div>
-
-      <p>{{ $t('example.calendarTime') }}</p>
-      <div class="moment-method">
-        <p>{{ $moment().subtract(10, 'days').calendar() }}</p>
-        <p>{{ $moment().subtract(6, 'days').calendar() }}</p>
-        <p>{{ $moment().subtract(3, 'days').calendar() }}</p>
-        <p>{{ $moment().subtract(1, 'days').calendar() }}</p>
-        <p>{{ $moment().calendar() }}</p>
-        <p>{{ $moment().add(1, 'days').calendar() }}</p>
-        <p>{{ $moment().add(3, 'days').calendar() }}</p>
-        <p>{{ $moment().add(10, 'days').calendar() }}</p>
-      </div>
-
-      <p>{{ $t('example.multilingualSupport') }}</p>
-      <div class="moment-method">
-        <p>{{ $moment.locale() }}</p>
-        <p>{{ $moment().format('LT') }}</p>
-        <p>{{ $moment().format('LTS') }}</p>
-        <p>{{ $moment().format('L') }}</p>
-        <p>{{ $moment().format('l') }}</p>
-        <p>{{ $moment().format('LL') }}</p>
-        <p>{{ $moment().format('ll') }}</p>
-        <p>{{ $moment().format('LLL') }}</p>
-        <p>{{ $moment().format('lll') }}</p>
-        <p>{{ $moment().format('LLLL') }}</p>
-        <p>{{ $moment().format('llll') }}</p>
+      <div class="dayjs-method">
+        <p>{{ $dayjs().format('dddd') }}</p>
+        <p>{{ $dayjs().format('YY/MM/DD') }}</p>
+        <p>{{ $dayjs().format('YYYY/MM/DD') }}</p>
       </div>
     </section>
   </div>
@@ -77,7 +39,7 @@ export default {
     'selectedLanguage': function(newLang) {
       this.$i18n.locale = newLang;
       this.$store.dispatch('app/setLanguage', newLang);
-      this.$moment.locale(newLang);
+      this.$dayjs.locale(newLang);
     }
   },
   created() {},
@@ -134,7 +96,7 @@ export default {
     margin: 10px 0;
   }
 
-  .moment-method {
+  .dayjs-method {
     padding: 5px;
     border: 1px solid rgba(34, 34, 34, 0.2);
     border-radius: 4px;
