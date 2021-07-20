@@ -27,7 +27,7 @@ export function getLanguage() {
       return locale;
     }
   }
-  return 'zh-ch';
+  return 'en';
 }
 
 const i18n = new VueI18n({

@@ -37,12 +37,14 @@ export default {
   },
   watch: {
     'selectedLanguage': function(newLang) {
-      this.$i18n.locale = newLang;
-      this.$store.dispatch('app/setLanguage', newLang);
-      this.$dayjs.locale(newLang);
+      // this.$i18n.locale = newLang;
+      // this.$store.dispatch('app/setLanguage', newLang);
+      // this.$dayjs.locale(newLang);
     }
   },
-  created() {},
+  created() {
+    console.log(this.$store.getters.language);
+  },
   mounted() {},
   methods: {}
 };
